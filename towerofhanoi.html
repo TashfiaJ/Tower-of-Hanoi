@@ -1,0 +1,418 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <style>
+            body{
+                background-image: url(./Towerofhanoi.webp);
+                background-size: cover;
+                background-position: center;
+            }
+            @keyframes fade-up {
+                from {
+                    transform: translateY(50px);
+                    opacity: 0;
+                }
+                to {
+                transform: translateY(0);
+                opacity: 1;
+                }
+            }
+            #div1{
+                width: 20%;
+                height: 40%;
+                border: 5px solid white;
+                text-align: center;
+                float: left;
+                margin: 20px;
+                margin-left: 20ch;
+                border-radius: 10px;
+            }
+            #div2{
+                width: 20%;
+                height: 40%;
+                border: 5px solid white;
+                text-align: center;
+                float: left;
+                margin: 20px;
+                margin-left: 10ch;
+                border-radius: 10px;
+            }
+            #div3{
+                width: 20%;
+                height: 40%;
+                border: 5px solid white;
+                text-align: center;
+                float: left;
+                margin: 20px;
+                margin-left: 5ch;
+                border-radius: 10px;
+            }
+            #fst{
+                margin-top: 5px;
+                margin-left: 178px;
+                width: 20%;
+                height: 40%;
+                border: 2px solid white;
+                border-radius: 10px;
+                text-align: center;
+                padding-top: 5px;
+                float: left;
+                background-color: white;
+                color: purple;
+                font-weight: bold;
+                font-size: large;
+                /* margin-right: 50px; */
+                
+            }
+            .mydiv1{
+                
+                height: 100px;
+                clear: both;
+                
+                
+            }
+            #snd{
+                margin-top: 5px;
+                margin-left: 109px;
+                width: 20%;
+                height: 40%;
+                padding-top: 5px;
+                border: 2px solid white;
+                border-radius: 10px;
+                text-align: center;
+                float: left;
+                background-color: white;
+                color: purple;
+                font-weight: bold;
+                font-size: large;
+                /* margin-right: 50px; */
+               
+            }
+            #trd{
+                margin-top: 5px;
+                margin-left: 65px;
+                width: 20%;
+                height: 40%;
+                padding-top: 5px;
+                border: 2px solid white;
+                border-radius: 10px;
+                background-color: white;
+                text-align: center;
+                float: left;
+                color: purple;
+                font-weight: bold;
+                font-size: large;
+                /* margin-right: 50px; */
+            }
+            .flex-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+            .lowerbtns{
+               
+                color: purple;
+                border-radius: 30px;
+                border-color: white;
+                width: 12%;
+                margin-top: 30px;
+                margin-left: 50px;
+            }
+            #lwr{
+               
+                margin: 5ch;
+                display: flex;
+                justify-content: center;
+                
+            }
+            #lowerbox{
+                clear: both;
+            }
+            .rc{
+                width: 15%;
+                margin: 5px;
+                border-radius: 30px;
+                border-color: white;
+                color: purple;
+            }
+            .btns{
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                display: block;
+                margin-top: 5px;
+                border-radius: 10px;
+                border-color: white;
+                color: purple;
+            }
+            #title
+            {  
+                text-align: center;
+                color: rgb(36, 1, 36);
+                font-family: 'Lucida Sans';
+                font-weight: bold;
+                font-size: 60px;
+                animation: fade-up 1s;
+            }
+            #mydiv{
+                animation: fade-up 1s;
+                margin-top: 5px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="title">Tower of Hanoi</div>
+        <div id="mydiv">
+        <div id="div1" class="flex-container">
+            <button id="2" class="btns">2</button>
+            <button id="4" class="btns">4</button>
+            <button id="3" class="btns">3</button>
+            <button id="1" class="btns">1</button>
+        </div>
+        <div id="div2" class="flex-container"></div>
+        <div id="div3" class="flex-container"></div>
+        <div class="mydiv1" >
+            <div id="fst" >1</div>
+            <div id="snd" >2</div>
+            <div id="trd" >3</div>
+        </div>
+        <div id="lowerbox">
+        <button id="1to2" class="lowerbtns">1->2</button>
+        <button id="2to3" class="lowerbtns">2->3</button>
+        <button id="3to1" class="lowerbtns">3->1</button>
+        <button id="3to2" class="lowerbtns">3->2</button>
+        <button id="2to1" class="lowerbtns">2->1</button>
+        <button id="1to3" class="lowerbtns">1->3</button>
+        </div>
+        <div id="lwr">
+        <button id="reset" class="rc">Reset</button>
+        <button id="check" class="rc">Check</button>
+        </div>
+        </div>
+        <script>
+
+            let button1=document.getElementById("1to2");
+            let button2=document.getElementById("2to3");
+            let button3=document.getElementById("3to1");
+            let button4=document.getElementById("3to2");
+            let button5=document.getElementById("2to1");
+            let button6=document.getElementById("1to3");
+            let button7=document.getElementById("reset");
+            let button8=document.getElementById("check");
+
+            let div1=document.getElementById("div1");
+            let div2=document.getElementById("div2");
+            let div3=document.getElementById("div3");
+
+            button1.addEventListener("click", myFunction1);
+            button2.addEventListener("click", myFunction2);
+            button3.addEventListener("click", myFunction3);
+            button4.addEventListener("click", myFunction4);
+            button5.addEventListener("click", myFunction5);
+            button6.addEventListener("click", myFunction6);
+            button7.addEventListener("click", resetButton);
+            button8.addEventListener("click", checkButton);
+
+            function myFunction1() {
+            let e1 = div1.firstElementChild;
+            let e2= div2.firstElementChild;
+            let discfrom=parseInt(div1.firstElementChild.innerHTML);
+            if(e2 == null){
+            div2.insertBefore(e1, div2.firstElementChild);}
+            else{
+            let discto=parseInt(div2.firstElementChild.innerHTML);
+            if(discfrom<discto)
+            {
+                div2.insertBefore(e1, div2.firstElementChild);
+            }
+            else
+            {
+                alert("can't move");
+            }
+            }
+            }
+
+            function myFunction2() {
+            let e1 = div2.firstElementChild;
+            let e2= div3.firstElementChild;
+            let discfrom=parseInt(div2.firstElementChild.innerHTML);
+            if(e2 == null){
+            div3.insertBefore(e1, e2);}
+            else{
+            let discto=parseInt(div3.firstElementChild.innerHTML);
+            if(discfrom<discto)
+            {
+                div3.insertBefore(e1, div3.firstElementChild);
+            }
+            else
+            {
+                alert("can't move");
+            }
+            }   
+            }
+
+            function myFunction3() {
+                let e1 = div3.firstElementChild;
+                let e2= div1.firstElementChild;
+            let discfrom=parseInt(div3.firstElementChild.innerHTML);
+            if(e2 == null){
+            div1.insertBefore(e1, e2);}
+            else{
+            let discto=parseInt(div1.firstElementChild.innerHTML);
+            if(discfrom<discto)
+            {
+                div1.insertBefore(e1, div1.firstElementChild);
+            }
+            else
+            {
+                alert("can't move");
+            }
+            } 
+            
+            }
+
+            function myFunction4() {
+            let e1 = div3.firstElementChild;
+            let e2= div2.firstElementChild;
+            let discfrom=parseInt(div3.firstElementChild.innerHTML);
+            if(e2 == null){
+            div2.insertBefore(e1, e2);}
+            else{
+            let discto=parseInt(div2.firstElementChild.innerHTML);
+            if(discfrom<discto)
+            {
+                div2.insertBefore(e1, div2.firstElementChild);
+            }
+            else
+            {
+                alert("can't move");
+            }
+            } 
+            }
+
+            function myFunction5() {
+            let e1 = div2.firstElementChild;
+            let e2= div1.firstElementChild;
+            let discfrom=parseInt(div2.firstElementChild.innerHTML);
+            if(e2 == null){
+            div1.insertBefore(e1, e2);}
+            else{
+            let discto=parseInt(div1.firstElementChild.innerHTML);
+            if(discfrom<discto)
+            {
+                div1.insertBefore(e1, div1.firstElementChild);
+            }
+            else
+            {
+                alert("can't move");
+            }
+            } 
+            }
+
+            function myFunction6() {
+            let e1 = div1.firstElementChild;
+            let e2= div3.firstElementChild;
+            let discfrom=parseInt(div1.firstElementChild.innerHTML);
+            if(e2 == null){
+            div3.insertBefore(e1, e2);}
+            else{
+            let discto=parseInt(div3.firstElementChild.innerHTML);
+            if(discfrom<discto)
+            {
+                div3.insertBefore(e1, div3.firstElementChild);
+            }
+            else
+            {
+                alert("can't move");
+            }
+            } 
+            }
+
+            function resetButton(){
+                let div2_elements = div2.children;
+                    while(div2_elements.length > 0){
+                        div1.appendChild(div2_elements[0]);
+                    }
+                let div3_elements = div3.children;
+                    while(div3_elements.length > 0){
+                        div1.appendChild(div3_elements[0]);
+                    }
+                    let array = [];
+                 while(1){   
+                    array = [];
+                    while(array.length < 4){
+                        let random = Math.floor(4 * Math.random()) + 1;
+                        if(!array.includes(random))
+                        { 
+                            array.push(random);
+                        }
+                    }
+                    let isSorted = true;
+                    let arr=[];
+                for (let i = 0; i < arr.length - 1; i++) {
+                    if (arr[i] > arr[i + 1]) {
+                        isSorted=false;
+                        break;
+                    }
+                   
+                }
+                if(isSorted==true)
+                {
+                    break;
+                }
+                 }
+
+                 let btns=document.querySelectorAll(".btns");
+                 if(btns.length>0){
+                 for(let i=0;i<4;i++){
+                    btns[i].innerHTML=array[i];
+
+                 }
+                }
+            }
+
+            function checkButton(){
+                let divids=["div1","div2","div3"];
+                let found=false;
+                for(let i=0;i<divids.length;i++)
+                {   
+                    let div=document.getElementById(divids[i]);
+                    let disc=div.querySelectorAll(".btns");
+                    if(disc.length==4)
+                    {
+                        found=true;
+                    
+                    let arr =[];
+                    for(let i=0;i<disc.length;i++){
+                   arr.push( parseInt(disc[i].innerHTML));}
+                   arraySorted(arr);
+                }
+                }      
+                }
+           function arraySorted(arr){
+             {
+                let isSorted = true;
+                for (let i = 0; i < arr.length - 1; i++) {
+                    if (arr[i] > arr[i + 1]) {
+                        isSorted=false;
+                        break;
+                    }
+                   
+                }
+                if(isSorted){
+                    alert("Congrats! You have won the game!!");
+                }
+                else{
+                alert("Sorry, try again."); 
+                }
+                
+            }
+            }
+
+        </script>
+    </body>
+</html>
